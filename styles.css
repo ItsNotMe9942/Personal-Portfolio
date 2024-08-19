@@ -8,14 +8,21 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --bg-colour: #282828;
+  --snd-colour: black;
+  --text-colour: #33FF00;
+  --main-colour: white;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
 body {
-  background: blue;
-  color: red;
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
 }
 
 section {
@@ -29,34 +36,34 @@ section {
   left: 0;
   width: 100%;
   padding: 2rem 9%;
-  background: green;
+  background: var(--bg-colour);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   z-index: 99999;
 }
 
 .logo {
   font-size: 2.5rem;
-  color: cadetblue;
+  color: var(--text-colour);
   font-weight: 700;
   cursor: default;
 }
 
 .navbar a {
   font-size: 1.5rem;
-  color: aqua;
+  color: var(--text-colour);
   margin-left: 4rem;
   font-weight: 700;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color :blueviolet
+  color : var(--text-colour)
 }
 
 #menu-icon {
   font-size: 3.6rem;
-  color: chocolate;
+  color: var(--text-colour);
   display: none;
 }
 
@@ -71,7 +78,7 @@ section {
 }
 
 span {
-  color: black;
+  color: var(--main-colour);
 }
 
 .home-content h1 {
@@ -83,4 +90,58 @@ span {
 .home-img img {
   width:25vw;
   animation: floatImage 4s ease-in-out infinite
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform:  translateY(-2.4rem)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-colour);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-colour);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-colour);
+  color: var(--snd-colour);
+  box-shadow: 0 0 1rem blue;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-colour);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-colour);
+  font-size: 1.6rem;
+  color: var(--bg-colour);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5 ease;
+}
+
+.btn:hover {
+  box-shadow: none;
 }
