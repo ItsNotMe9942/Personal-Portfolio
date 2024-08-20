@@ -10,9 +10,7 @@
 
 :root {
   --bg-colour: #282828;
-  --snd-colour: black;
   --text-colour: #33FF00;
-  --main-colour: white;
 }
 
 html {
@@ -78,7 +76,7 @@ section {
 }
 
 span {
-  color: var(--main-colour);
+  color: white;
 }
 
 .home-content h1 {
@@ -89,7 +87,8 @@ span {
 
 .home-img img {
   width:25vw;
-  animation: floatImage 4s ease-in-out infinite
+  animation: floatImage 4s ease-in-out infinite;
+  border-color: var(--text-colour);
 }
 
 @keyframes floatImage {
@@ -115,33 +114,67 @@ span {
   width: 4rem;
   height: 4rem;
   background: transparent;
-  border: .2rem solid var(--main-colour);
+  border: .2rem solid white;
   border-radius: 50%;
   font-size: 2rem;
-  color: var(--main-colour);
+  color: white;
   margin: 3rem 1.5rem 3rem 0;
   transition: .5s ease;
 }
 
 .social-media a:hover {
-  background: var(--main-colour);
-  color: var(--snd-colour);
-  box-shadow: 0 0 1rem blue;
+  background: white;
+  color: var(--bg-colour);
+  box-shadow: 0 0 1rem white;
 }
 
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
-  background: var(--main-colour);
+  background: white;
   border-radius: 4rem;
-  box-shadow: 0 0 1rem var(--main-colour);
+  box-shadow: 0 0 1rem white;
   font-size: 1.6rem;
   color: var(--bg-colour);
   letter-spacing: .1rem;
   font-weight: 600;
   transition: .5 ease;
+
 }
 
 .btn:hover {
   box-shadow: none;
+
 }
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--text-colour);
+}
+
+.about-img img {
+  width: 35vw
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 2.6rem;
+  margin: 2rem 0 3rem;
+}
+
