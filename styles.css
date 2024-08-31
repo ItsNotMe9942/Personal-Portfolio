@@ -129,6 +129,156 @@ span {
   box-shadow: 0 0 1rem white;
 }
 
+.skills {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: .5rem;
+  grid-column-gap: 7rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.skill-bar {
+  margin-bottom: 2.3rem;
+}
+
+.skills .info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px
+}
+
+.skills .bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--text-colour);
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skills .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 0 1rem white;
+}
+
+.skills .bar .html {
+  width: 68%;
+  animation: html 3s;
+}
+
+.skills .bar .javaScript {
+  width: 72%;
+  animation: javaScript 3s;
+}
+
+.skills .bar .css {
+  width: 58%;
+  animation: css 4s;
+}
+
+.skills .bar .react {
+  width: 72%;
+}
+
+.skills .bar .html {
+  width: 72%;
+}
+
+.skills .bar .html {
+  width: 72%;
+}
+
+.skills .bar .html {
+  width: 72%;
+}
+
+.skills .fa-brands {
+  color: white;
+  font-size: 50px
+}
+
+.skills img {
+  width: 5rem;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes javaScript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 58%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 72%;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
