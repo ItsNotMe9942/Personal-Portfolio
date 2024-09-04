@@ -80,7 +80,7 @@ span {
 }
 
 .home-content h1 {
-  font-size: 5.6rem;
+  font-size: 6.6rem;
   font-weight: 700;
   line-height: 1.3;
   text-decoration: underline;
@@ -667,7 +667,7 @@ footer {
   }
 
   .portfolio-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -687,11 +687,11 @@ footer {
   }
 
   .portfolio-layer h4 {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
   }
 
   .portfolio-layer p {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
   }
 }
 
