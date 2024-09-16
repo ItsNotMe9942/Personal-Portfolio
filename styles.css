@@ -474,30 +474,54 @@ span {
   margin-bottom: 3rem;
 }
 
-.contact form .input-box {
+form .input-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.contact form .input-box input,
-.contact form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
+.input-box .input-field {
+  width: 48.5%;
+}
+
+.field .item {
+  width: 100%;;
+  padding: 18px;
+  background: transparent;
+  border: 2px solid var(--text-colour);
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
   color: var(--text-colour);
-  border: .3rem solid;
-  background: var(--bg-colour);
-  border-radius: .8rem;
-  margin: .7rem 0;
+  margin: 12px 0;
 }
 
-.contact form .input-box input {
-  width: 49%;
+.field.error .item {
+  border-color: #d93025;
 }
 
-.contact form textarea {
+.field .item::placeholder {
+  color: rgb(255, 255, 255, .3);
+}
+
+.field .error-text {
+  font-size: 14.5px;
+  color: #d93025;
+  text-align: left;
+  margin: -5px 0 10px;
+  display: none;
+}
+
+.field.error .error-text {
+  display: block;
+}
+
+form .textarea-field .item {
   resize: none;
+}
+
+form .textarea-field .error-text {
+  margin-top: -10px;
 }
 
 .contact form .btn {
