@@ -177,8 +177,8 @@ span {
 }
 
 .skills .bar .javaScript {
-  width: 72%;
-  animation: javaScript 6s;
+  width: 82%;
+  animation: javaScript 7s;
 }
 
 .skills .bar .css {
@@ -188,25 +188,25 @@ span {
 }
 
 .skills .bar .react {
-  width: 32%;
-  animation: react 6s;
+  width: 62%;
+  animation: react 7s;
 }
 
 .skills .bar .python {
   width: 65%;
-  animation: python 6s;
+  animation: python 3s;
 
 }
 
 .skills .bar .mysql {
   width: 62%;
-  animation: mysql 6s;
+  animation: mysql 4s;
 
 }
 
 .skills .bar .git {
   width: 52%;
-  animation: git 6s
+  animation: git 4s
 }
 
 .skills .fa-brands {
@@ -234,7 +234,7 @@ span {
   }
 
   100% {
-    width: 72%;
+    width: 82%;
   }
 }
 
@@ -254,7 +254,7 @@ span {
   }
 
   100% {
-    width: 32%;
+    width: 62%;
   }
 }
 
