@@ -28,6 +28,8 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+
+
 .header {
   position: fixed;
   top: 0;
@@ -643,11 +645,11 @@ footer {
   }
 
   .home-content h3 {
-    font-size: 5rem;
+    font-size: 1.7rem;
   }
 
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 4.2rem;
   }
 
   .home-content {
@@ -655,18 +657,12 @@ footer {
   }
 
   .home-img img {
-    width: 90vw;
-    margin-top: 4rem;
+    display: none
+    
   }
 
   .skills {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: auto;
-    grid-column-gap: 4rem;
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    width: 90%;
   }
 
   .about {
@@ -701,8 +697,13 @@ footer {
   }
 
   .home-img img {
-    width: 80vw;
+    display: none;
+    width: 10vw;
     margin-top: 8rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.4rem;
   }
 
   .about-img img {
@@ -716,27 +717,5 @@ footer {
 
   .portfolio-layer p {
     font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-
-  .contact form .input-box input {
-    width: 100%;
-  }
-
-  .portfolio-container {
-    grid-template-columns: repeat(0, 1fr);
-  }
-
-  .portfolio-layer h4 {
-    font-size: 1.4rem;
-  }
-
-  .portfolio-layer p {
-    font-size: 1.4rem;
   }
 }
