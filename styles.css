@@ -206,7 +206,11 @@ span {
 .skills .bar .mysql {
   width: 62%;
   animation: mysql 4s;
+}
 
+.skills .bar .flask {
+  width: 32%;
+  animation: flask 4s;
 }
 
 .skills .bar .git {
@@ -280,6 +284,16 @@ span {
 
   100% {
     width: 62%;
+  }
+}
+
+@keyframes flask {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 32%;
   }
 }
 
