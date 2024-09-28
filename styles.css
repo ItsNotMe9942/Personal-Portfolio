@@ -87,6 +87,10 @@ span {
   text-decoration: underline;
 }
 
+.home-content h3 {
+  font-size: 2rem;
+}
+
 
 .home-img img {
   width: 15vw;
@@ -345,7 +349,7 @@ span {
 
 .about-img img {
   width: 35vw;
-  border-radius: 0.5%;
+  border-radius: 1%;
 }
 
 .heading {
