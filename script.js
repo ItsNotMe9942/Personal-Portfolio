@@ -21,7 +21,7 @@ window.onscroll = () => {
       navLinks.forEach(link => {
         link.classList.remove('active');
       });
-      
+
       document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
     }
   });
@@ -57,39 +57,17 @@ const typed = new Typed('.multiple-text', {
   loop: true,
 })
 
-/* Contact form */
+/*
+ * Contact form
+ *
+ * The original version of this portfolio used SMTPJS to send messages directly
+ * from browser-side JavaScript. That proof-of-concept implementation has been
+ * deliberately retired because email credentials should not be embedded in
+ * client-side code. The form is retained as part of the original UI and as a
+ * record of the validation work completed at the time.
+ */
 const form = document.getElementById('form');
-const fullName = document.getElementById('name');
 const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-const subject = document.getElementById('subject');
-const mess = document.getElementById('message');
-
-
-function sendEmail() {
-
-  const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${mess.value}<br>`;
-    
-  Email.send({
-    SecureToken: "64dbbd21-2696-4b1d-9f5e-dc9a4f788fcf",
-    Username : "christopher.reay85@gmail.com",
-    Password : "DBFCA201385402827CB4E146E270B58B8EB7",
-    To : 'christopher.reay85@gmail.com',
-    From : "christopher.reay85@gmail.com",
-    Subject : subject.value,
-    Body : bodyMessage
-}).then(
-  message => {
-    if (message == 'OK') {
-      Swal.fire({
-        title: "Success!",
-        text: "Message sent successfully!",
-        icon: "success"
-      });
-    }
-  }
-);
-}
 
 function checksInputs() {
   const items = document.querySelectorAll('.item');
@@ -108,12 +86,11 @@ function checksInputs() {
       checkEmail();
     })
 
-    item.addEventListener("keyup", () => {
+    item.addEventListener('keyup', () => {
       if (item.value != '') {
         item.classList.remove('error');
         item.parentElement.classList.remove('error');
-      } 
-      else {
+      } else {
         item.classList.add('error');
         item.parentElement.classList.add('error');
       }
@@ -123,19 +100,17 @@ function checksInputs() {
 
 function checkEmail() {
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  const errorTextEmail = document.querySelector('.error-text.email')
-  ;
+  const errorTextEmail = document.querySelector('.error-text.email');
 
   if (!email.value.match(emailRegex)) {
     email.classList.add('error');
     email.parentElement.classList.add('error');
 
-if (email.value != '') {
-  errorTextEmail.innerHTML = "Enter a valid email address"
-} else {
-  errorTextEmail.innerHTML = "Email can't be blank"
-}
-
+    if (email.value != '') {
+      errorTextEmail.innerHTML = 'Enter a valid email address';
+    } else {
+      errorTextEmail.innerHTML = "Email can't be blank";
+    }
   } else {
     email.classList.remove('error');
     email.parentElement.classList.remove('error');
@@ -143,14 +118,6 @@ if (email.value != '') {
 }
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); 
+  e.preventDefault();
   checksInputs();
-
-  if (!fullName.classList.contains('error') && !email.classList.contains('error') && !phone.classList.contains('error') && !subject.classList.contains('error') && !mess.classList.contains('error')) {
-    sendEmail();
-
-    form.reset();
-    return false;
-  }
 });
-
